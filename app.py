@@ -20,7 +20,7 @@ def process_mail(uid, raw):
     try:
         mail = mailparser.parse_from_bytes(raw)
         html = mail.body
-        subject = mail.subject or "No Subject"
+        subject = mail.subject or "Unnamed"
         sender = mail.from_[0][1]
 
         filename = f"/tmp/{uid}.pdf"
